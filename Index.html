@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adventure Awaits</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <img src="https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=600" class="background" />
+      <img src="foreground.png" class="foreground" />
+      <h1 class="animate">ADVENTURE</h1>
+    </div>
+
+    <section>
+      <h2 class="secHeading animate">Adventure Time</h2>
+      <p class="text animate">
+        Adventure Time is an exhilarating journey into the unknown, where each moment pulses with excitement and discovery. It’s about stepping outside your comfort zone, embracing challenges, and experiencing the thrill of the unexpected. Whether you’re racing down a mountain trail, soaring through the skies while paragliding, or riding the waves on a surfboard, adventure awakens the soul. It fosters courage, fuels curiosity, and creates unforgettable memories. With every heartbeat, you’re reminded that life is meant to be lived boldly. Adventure Time isn’t just an activity—it’s a mindset, a celebration of freedom, and an invitation to explore the world fearlessly.
+      </p>
+
+      <div class="bg bg1 animate">
+        <h2 class="desc animate">RACING</h2>
+      </div>
+      <p class="text animate">**Racing** is the ultimate test of speed, skill, and determination. Whether it's on a track, through rugged terrain, or across open water, racing pushes competitors to their limits. The roar of engines, the rush of adrenaline, and the intense focus required create an electrifying experience. It’s not just about crossing the finish line first—it’s about strategy, precision, and passion. Every turn, every second counts. Racing embodies the spirit of competition and the drive to be better, faster, and stronger. It’s a thrilling journey where victories are hard-earned, and the pursuit of excellence never stops. Racing is pure, high-octane adventure.</p>
+
+      <div class="bg bg2 animate">
+        <h2 class="desc animate">PARA GLIDING</h2>
+      </div>
+      <p class="text animate">**Paragliding** is a breathtaking adventure that lets you soar through the sky like a bird, offering an unmatched sense of freedom and exhilaration. Suspended beneath a lightweight canopy, you glide gracefully over mountains, valleys, and oceans, with the world unfolding beneath your feet. It’s a perfect blend of adrenaline and tranquility—thrilling during takeoff, yet peaceful as you float on the wind. Paragliding challenges your courage while rewarding you with stunning aerial views and a deep connection to nature. Whether you're a seasoned flyer or a first-timer, the experience is unforgettable. Paragliding truly captures the magic of flying and the spirit of adventure.</p>
+
+      <div class="bg bg3 animate">
+        <h2 class="desc animate">SURFING</h2>
+      </div>
+      <p class="text animate">**Surfing** is a thrilling dance between human and ocean, where balance, timing, and instinct come together in perfect harmony. Riding the waves offers a powerful rush of adrenaline and a deep sense of connection to nature. Each wave is unique, presenting a new challenge and a chance to improve. Surfing is not just a sport—it's a lifestyle, a form of meditation, and a celebration of the sea’s raw energy. From the calm paddle out to the explosive ride back to shore, surfing awakens the senses and strengthens the body. It’s freedom, fun, and adventure all rolled into one unforgettable experience.</p>
+    </section>
+  </div>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
